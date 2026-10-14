@@ -6,9 +6,13 @@ from processing.service import build_city_summary
 
 
 def parse_args(argv=None):
-    parser = argparse.ArgumentParser(description="Сводка по городу: погода + курс валюты")
+    parser = argparse.ArgumentParser(
+        description="Сводка по городу: погода + курс валюты"
+    )
     parser.add_argument("--city", required=True, help="Название города")
-    parser.add_argument("--currency", default="USD", help="ISO-код валюты (по умолчанию USD)")
+    parser.add_argument(
+        "--currency", default="USD", help="ISO-код валюты (по умолчанию USD)"
+    )
     return parser.parse_args(argv)
 
 

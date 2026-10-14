@@ -53,7 +53,7 @@ def get_weather(city: str) -> dict:
 
     forecast = http_get(
         FORECAST_URL,
-        {"latitude": lat, "longitude": lon, "current": "temperature_2m,weather_code"}
+        {"latitude": lat, "longitude": lon, "current": "temperature_2m,weather_code"},
     )
     if not forecast.get("current"):
         raise Server_unavailable("некорректный ответ прогноза")
